@@ -1,0 +1,433 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #333333;
+  --header-bg: #2980b9;
+  --button-bg: #27ae60;
+  --card-bg: #f9f9f9; 
+  --best-color: #2c3e50;
+}
+
+.dark-mode {
+  --bg-color: #2c3e50;
+  --text-color: #ecf0f1; 
+  --link-color: #3498db;
+  --header-bg: #1a1a1a;
+  --button-bg: #2ecc71;
+  --card-bg: #34495e; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-header {
+  background-image: url('../../images/pro.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.header-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.main-header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primary-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #2ecc71;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* For dark mode */
+.dark-mode .main-header {
+  background-color: #2c3e50;
+}
+
+.dark-mode .secondary-btn {
+  border: 2px solid #ecf0f1;
+  color: #ecf0f1;
+}
+
+.dark-mode .secondary-btn:hover {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+
+button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: darken(var(--button-bg), 10%);
+}
+
+#dark-mode {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+nav {
+  position: fixed; 
+  top: 0;           
+  left: 0;          
+  width: 100%;      
+  background-color: #2c3e50; 
+  padding: 1rem;    
+  z-index: 1000;    
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 20); 
+}
+
+nav a {
+  color:var(--card-bg); 
+  text-decoration: none; 
+  padding: 0.5rem 1rem; 
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
+
+main {
+  padding-top: 80px; 
+}
+
+
+main {
+  display: grid-column;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+  padding: 1rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  color: var(--text-color); 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  color: var(--text-color); 
+}
+
+form input, form textarea, form select {
+  width: 90%;
+  padding: 0.8rem;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: #333333; 
+}
+
+.dark-mode form input, .dark-mode form textarea, .dark-mode form select {
+  background-color: #2c3e50; 
+  color: #ecf0f1; 
+}
+
+form textarea {
+  height: 100px;
+}
+
+form button {
+  margin-top: 10px;
+  background-color: var(--best-color);
+}
+
+form button:hover {
+  background-color: darken(var(--button-bg), 10%);
+}
+
+footer {
+  background-color: #f1f1f1;
+  color: var(--link-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem; 
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  #dark-mode {
+    top: 5px;
+    right: 5px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  nav {
+    padding: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+#project-list{
+  margin-bottom: 10px;
+}
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  color: var(--text-color); 
+  padding: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.project-details h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-details h3 a:hover {
+  color: var(--accent-color);
+}
+
+.project-details p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.project-details p:last-child {
+  margin-bottom: 0;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-tag {
+  background-color: var(--accent-bg);
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.project-content {
+  padding: 15px;
+}
+
+
+.dark-mode .project-content p {
+  color: #bdc3c7; 
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#create-project{
+  width: 60%; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.delete-button {
+  background-color:var(--text-color);
+  color:var(--bg-color);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+
+/* src/components/AboutMe.css */
+
+#about-me {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text h2 {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.about-text p {
+  color: #555;
+  margin: 5px 0;
+}
+
